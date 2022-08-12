@@ -1,22 +1,22 @@
 {
-  "name": "node-red-contrib-kusto",
-  "version": "1.0.6",
-  "description": "Ingest messages to Azure Data Explorer aka. kusto",
-  "main": "src/kusto-ingest.js",
+  "name": "node-red-contrib-kusto-monitor",
+  "version": "0.0.1",
+  "description": "Monitor messages ingested to Azure Data Explorer aka. kusto",
+  "main": "src/kusto-monitor.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kaareseras/node-red-contrib-kusto"
+    "url": "https://github.com/frankvandenhurk/node-red-contrib-kusto-monitor"
   },
-  "keywords": ["Kusto","ADX","Azure Data Explorer","Node Red","node-red"],
-  "author": "Kåre Seest Rasmussen",
+  "keywords": ["Kusto","ADX","Azure Data Explorer","Node Red","node-red","Monitor"],
+  "author": "Kåre Seest Rasmussen, Frank van den Hurk",
   "license": "MIT",
   "node-red": {
     "version": ">=2.0.0",
     "nodes": {
-      "kusto-ingest": "src/kusto-ingest.js"
+      "kusto-monitor": "src/kusto-monitor.js"
     }
   },
   "engines": {

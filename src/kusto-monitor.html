@@ -10,6 +10,7 @@
         },
         credentials: {
             cluster_ingest_uri: {type:"text", required: true},
+			cluster_monitor_uri: {type:"text", required: true},
             application_id: {type: "text", required: true},
             application_secrect: {type: "text", required: true},
             directory_id: {type: "text", required: true},
@@ -34,6 +35,10 @@
     <div class="form-row">
         <label for="node-config-input-cluster_ingest_uri"><i class="fa fa-tag"></i> Cluster ingest URI</label>
         <input type="text" id="node-config-input-cluster_ingest_uri">
+    </div>
+	<div class="form-row">
+        <label for="node-config-input-cluster_monitor_uri"><i class="fa fa-tag"></i> Cluster URI for monitoring</label>
+        <input type="text" id="node-config-input-cluster_monitor_uri">
     </div>
     <div class="form-row">
         <label for="node-config-input-database_name"><i class="fa fa-tag"></i> Database Name</label>
@@ -66,7 +71,7 @@
 </script>
 
 <script type="text/javascript">
-    RED.nodes.registerType('kusto-ingest',{
+    RED.nodes.registerType('kusto-monitor',{
         category: 'function',
         color: '#a6bbcf',
         defaults: {
@@ -77,12 +82,12 @@
         outputs:1,
         icon: "adx.png",
         label: function() {
-            return this.name||"kusto-ingest";
+            return this.name||"kusto-monitor";
         }
     });
 </script>
 
-<script type="text/html" data-template-name="kusto-ingest">
+<script type="text/html" data-template-name="kusto-monitor">
     <div class="form-row">
         <label for="node-input-kustoConfig" style="white-space: nowrap; width: 125px">
             <i class="icon-tag"></i> Kusto account
@@ -95,6 +100,6 @@
     </div>
 </script>
 
-<script type="text/html" data-help-name="kusto-ingest">
-    <p>A node sends data into Kusto - Azure Data Explorer</p>
+<script type="text/html" data-help-name="kusto-monitor">
+    <p>A node monitors data send into Kusto - Azure Data Explorer</p>
 </script>

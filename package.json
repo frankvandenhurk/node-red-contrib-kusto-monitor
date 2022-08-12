@@ -1,6 +1,6 @@
 {
   "name": "@frankvandenhurk/node-red-contrib-kusto-monitor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Monitor messages ingested to Azure Data Explorer aka. kusto",
   "main": "src/kusto-monitor.js",
   "scripts": {

@@ -19,7 +19,7 @@ module.exports = function(RED) {
         this.streaming = node.streaming;
     }
 
-    RED.nodes.registerType("kusto-config", KustoConfigNode, {
+    RED.nodes.registerType("kusto-monitor-config", KustoConfigNode, {
         credentials: {
             cluster_ingest_uri: {type: "text"},
 			cluster_monitor_uri: {type: "text"},

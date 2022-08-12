@@ -1,5 +1,5 @@
 <script type="text/javascript">
-    RED.nodes.registerType('kusto-config', {
+    RED.nodes.registerType('kusto-monitor-config', {
         category: 'config',
         defaults: {
             name: {value: "Name your connection", required: true},
@@ -21,7 +21,7 @@
     });
 </script>
 
-<script type="text/html" data-template-name="kusto-config">
+<script type="text/html" data-template-name="kusto-monitor-config">
     <div class="form-tips" style="margin-bottom: 20px;">
         <h3>Getting Started:</h3>
         <p>You need to setup an Azure and a kusto account.</p>
@@ -75,7 +75,7 @@
         category: 'function',
         color: '#a6bbcf',
         defaults: {
-            kustoConfig: {value: "", type: "kusto-config"},
+            kustoConfig: {value: "", type: "kusto-monitor-config"},
             name: {value:""}
         },
         inputs:1,
